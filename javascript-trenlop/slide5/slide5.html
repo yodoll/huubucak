@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- demo 3 -->
+    <div id="hoa">
+        <p id="hoalan">Hoa Lan</p>
+        <p id="hoahong">Hoa Hong</p>
+        <p id="hoadao">Hoa Dao</p>
+    </div>
+    <script>
+        // Truy xuat den node cha (div id la hoa)
+        var hoa = document.querySelector('#hoa');
+        console.log(hoa);
+        // kiem tra cac node con cua div
+        console.log(hoa.childNodes)
+        // Truy xuat den node con thu 2 cua div hoa
+        var hoalan = hoa.firstChild.nextSibling;
+        console.log(hoalan);
+        // Truy xuat den text node ben trong div hoalan
+        var thoalan = hoalan.childNodes;
+        console.log(thoalan);
+        // Lay gia tri cua text node trong div hoalan
+        var vhoalan = thoalan[0].nodeValue;
+        console.log(vhoalan);
+
+        // Them element node (Them mot the p trong div hoa)
+        // createElement + appendChild
+        // Khởi tạo elenment node (tạo thẻ p)
+        var elp = document.createElement("p");
+        console.log(elp);
+        // Thêm element node vào node cha (Thêm thẻ p vừa tạo vào div hoa)
+        hoa.appendChild(elp);
+        // Thêm nội dung vào thẻ p
+        // Thêm text node vào element node
+        //CreateTextNode + appendChild
+        var tp = document.createTextNode("Hoa mai");
+        elp.appendChild(tp);
+        // Xóa element node
+        // xóa thẻ p đầu tiên
+        // RemoveChild
+        // Truy xuất đến thẻ p đầu tiên
+        var phoalan = document.getElementById("hoalan");
+        console.log(phoalan);
+        // Xóa
+        hoa.removeChild(phoalan);
+    </script>
+</body>
+</html>

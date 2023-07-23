@@ -1,0 +1,329 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-weight{
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.row{
+    margin: 0 -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.pull-right {
+    float: right;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-hafl{
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    height: 46px;
+    z-index: 999;
+}
+
+.menu {
+    display: inline-block;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu  li  a {
+    display: block;
+    font-size: 16px;
+    line-height: 46px;
+    text-decoration: none;
+    padding: 0 24px;
+}
+
+.menu > li > a {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu > li:hover > a,
+.menu .submenu li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+.menu-arrow-down {
+    font-size: 14px;
+}
+
+.menu,
+.submenu{
+    list-style: none;
+}
+
+.menu .submenu{
+    position: absolute;
+    min-width: 160px;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.menu .submenu a{
+    color: #000;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li a {
+    color: #fff;
+}
+
+.header .magnifier {
+    float: right;
+    padding: 0 21px;
+    color: #fff;
+}
+
+.header .menu-magnifier {
+    font-size: 20px;
+    line-height: 46px;
+}
+
+.header .magnifier:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+.slider{
+    position: relative;
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url('/code_again/assets/img/slide/slider_1.jpg') top center / cover no-repeat;
+
+}
+
+.text-content{
+    position: absolute;
+    bottom: 46px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+.text-content .text-heading {
+    font-weight: 500;
+}
+
+.text-content .text-decription{
+    font-size: 15px;
+    margin-top: 25px;
+    text-shadow: 0 0 1px #000;
+}
+
+/* .content{
+    height: 1500px;
+} */
+
+.content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0 112px;
+}
+
+.content .content-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.content .content-sub-heading{
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.content .about-text {
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.content .member-list{
+    margin-top: 48px;
+}
+
+.content .member-name{
+    font-size: 15px;
+}
+
+.content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Tour */
+.tour-section {
+    background-color: #000;
+}
+
+.ticket-list {
+    background-color: #fff;
+    list-style: none;
+}
+
+.ticket-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ticket-list .sold-out {
+    font-size: 15px;
+    color: #fff;
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 15px;
+}
+
+.ticket-list .quantity {
+    background-color: #000;
+    width: 24px;
+    float: right;
+    height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 24px;
+}
+
+/* place */
+
+.place-list {
+    margin-top: 32px;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-body{
+    font-size: 15px;
+    background-color: #fff;
+    padding: 16px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.place-time{
+    color: #757575;
+    padding: 15px 0 0 0;
+    font-size: 15px;
+}
+
+.place-desc {
+    padding-top: 15px;
+    line-height: 1.4;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* contact */
+
+.contact-content {
+    margin-top: 42px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="icon-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+
+
+
+/* footer */
+.footer{
+
+}

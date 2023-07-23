@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://anhdephd.vn/wp-content/uploads/2022/04/anh-to-tinh.jpg')top center no-repeat;
+}
+
+#header {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .main {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ee8c82;
+    padding-top: 25px;
+    margin-top: 85px;
+}
+
+.wrapper .picture {
+    width: 300px;
+    height: 300px;
+}
+
+.wrapper .heading {
+    color: #fff;
+    font-weight: 400;
+    padding: 15px 60px 0px 60px;
+}
+
+.wrapper .content-main {
+    font-size: 20px;
+    margin-top: 25px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.wrapper .action {
+    margin-top: -5px;
+    padding: 35px;
+}
+
+.wrapper .action button {
+    background: #eecb82;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wrapper .btn-ok:hover {
+    background-color: #d42e1dd9;
+    color: #fff;
+}
+
+.content {
+    display: none;
+}
+
+
+
+
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.content {
+    z-index: -2;
+}
+
+.heart-first {
+    width: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.heart {
+    fill: red;
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-fail {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    width: 175px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: hehe 0.1s linear;
+}
+
+@keyframes hehe {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.btn-success {
+    left: 58%;
+    position: absolute;
+    top: 48%;
+    color: #fff;
+    border: none;
+    background-color: red;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    opacity: 0.8;
+    color: #ccc;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.header .answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .ask {
+    position: relative;
+    width: 700px;
+    max-height: 500px;
+    border: 1px #000 solid;
+    background-color: #ff6c00f2;
+    border-radius: 15px;
+    padding: 10px 20px;
+    top: 275px;
+}
+
+.header .first-heading {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.header .first {
+    font-size: 20px;
+    color: #fff;
+    padding: 5px;
+}
+
+.header .btn-again {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: orange;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+}
+
+.header .btn-again:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+

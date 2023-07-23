@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">Mở cửa sổ mới</button>
+    <button onclick="closeWindow()">Đóng cửa sổ mới</button>
+    <button onclick="checkWindow()">Kiểm tra cửa sổ đã đóng hay chưa</button>
+    <script>
+        let myWindows;
+        let check;
+        function openWindow(){
+            check = 0;
+            myWindows = window.open("", "","width=100, height=100", "toolbar=1,location=1,menubar=1")
+        }
+        function closeWindow(){
+            check = 1;
+            myWindows.close();
+        }
+        function checkWindow(){
+            if(check == 0){
+                alert("Cửa sổ chưa đóng");
+            }else{
+                alert("Cửa sổ đã đóng");
+            }
+        }
+    </script>
+</body>
+</html>

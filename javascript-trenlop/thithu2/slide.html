@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div class="img">
+                    <img src="./assets/img/1413699.jpg" alt="" width="980px" height="300px" />
+                </div>
+                <div class="img">
+                    <img src="./assets/img/2898021.jpg" alt="" width="980px" height="300px" />
+                </div>
+                <div class="img">
+                    <img src="./assets/img/3513670.jpg" alt="" width="980px" height="300px" />
+                </div>
+                <div class="img">
+                    <img src="./assets/img/3513674.jpg" alt="" width="980px" height="300px" />
+                </div>
+                <div class="img">
+                    <img src="./assets/img/3513676.jpg" alt="" width="980px" height="300px" />
+                </div>
+            </div>
+        </div>
+        <script>
+            var slide = 1;
+            var interval;
+            slideShow(slide);
+
+            function nextDivs(n) {
+                slideShow((slide += n));
+            }
+
+            function slideShow(n) {
+                var i;
+                var x = document.querySelectorAll(".img");
+                if (n > x.length) {
+                    slide = 1;
+                }
+                if(n < 1){
+                    slide = x.length
+                }
+                for(i=0;i<x.length;i++){
+                    x[i].style.display = "none";
+                }
+                x[slide - 1].style.display = "block";
+            }
+
+            // function autoNext(){
+            //     clearInterval(interval);
+            //     autoSlides();
+            // }
+
+            function autoSlides(){
+                interval = setInterval(function() {
+                    nextDivs(1);
+                },1000)
+            }
+
+            autoSlides();
+
+            // function stopNext(){
+            //     clearInterval(interval);
+            // }
+        </script>
+    </body>
+</html>

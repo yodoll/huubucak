@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.alll {
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgb(255, 108, 63);
+}
+
+.product {
+    position: relative;
+    height: 400px;
+}
+
+.s23 {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 400px;
+    text-align: center;
+}
+
+.s23 img:hover {
+    opacity: 0.6;
+}
+
+.s23plus {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 340px;
+    text-align: center;
+}
+
+.s23plus img:hover {
+    opacity: 0.6;
+}
+
+.s23ultra {
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.s23ultra img:hover {
+    opacity: 0.6;
+}
+
+.product button {
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(179, 209, 7);
+    color: rgb(167, 107, 68);
+    cursor: pointer;
+}
+
+.errol1 {
+    margin-top: 33px;
+}
+
+.product button:hover {
+    background-color: rgb(255, 119, 119);
+}
+
+.product h2 {
+    color: rgb(255, 37, 37);
+}
+
+.product h3:hover {
+    color: rgb(13, 145, 145);
+    cursor: pointer;
+}
+
+.table-bordered {
+    width: 900px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.rowww {
+    position: absolute;
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+
+.row1 {
+    padding-right: 75px;
+}
+
+.row2 {
+    padding-right: 27px;
+}
+
+.row3 {
+    padding-right: 100px;
+}
+
+.row4 {
+    padding-right: 32px;
+}
+
+.row5 {
+    padding-right: 20px;
+}
+
+.column {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.sum {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+#tongtien {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 70px;
+}
+
+.remove {
+    position: absolute;
+    margin-left: 522px;
+    margin-top: -25px;
+    border-radius: 3px;
+}
+
+.footer {
+    height:360px;
+    background-color: rgb(3, 83, 57);
+    width: 900px;
+    margin: 0 auto;
+}

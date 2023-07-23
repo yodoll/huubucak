@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .container {
+                width: 1000px;
+                margin: 0 auto;
+            }
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .logo {
+                width: 178.83px;
+                height: 60px;
+            }
+            ul {
+                display: flex;
+            }
+            li {
+                list-style: none;
+                padding: 0 21px;
+                font-weight: 500;
+                font-weight: 700;
+            }
+
+            .header ul li a {
+                text-decoration: none;
+                color: #000000;
+            }
+
+            .header ul li:hover a {
+                color: orange;
+                cursor: pointer;
+            }
+
+            .button {
+            }
+
+            .button .btn {
+                border: none;
+                background-color: #000000;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                padding: 0 10px;
+            }
+
+            .button .btn a {
+                text-decoration: none;
+                color: #ccc;
+            }
+
+            .button .btn:hover a {
+                color: #fff;
+            }
+
+            .icon {
+                width: 24px;
+                height: 24px;
+                padding: 0 3px;
+            }
+            .banner {
+                width: 100%;
+                height: 597px;
+                background: url("./img/banner2.jpg");
+                background-size: cover;
+                margin-top: 20px;
+            }
+            .content {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 40px;
+            }
+            .item {
+                text-align: center;
+            }
+            .item img {
+                width: 250px;
+                height: 280px;
+                margin-top: 20px;
+            }
+            .title,
+            .money,
+            .btn {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                color: #000000;
+                text-align: center;
+                border-radius: 4px;
+            }
+            .btn {
+                height: 50px;
+                background: #2c2c2c;
+                color: white;
+                line-height: 50px;
+            }
+
+            .btn a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .btn a:hover {
+                color: #ccc;
+            }
+
+            .des {
+                opacity: 0;
+                transition: 0.5s;
+            }
+            .item:hover .des {
+                transform: translate(0px, -100px);
+                opacity: 1;
+            }
+
+            .footer {
+                width: 100%;
+                margin-top: 20px;
+                background-color: orange;
+                text-align: center;
+            }
+
+            .footer p {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="./img/image 7.png" alt="" class="logo" />
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#content">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./tintuc.html">Blog</a></li>
+                </ul>
+                <div style="display: flex; cursor: pointer">
+                    <img src="./img/notifications_none.png" alt="" class="icon" />
+                    <img src="./img/person.png" alt="" class="icon" />
+                    <img src="./img/add_shopping_cart.png" alt="" class="icon" />
+                </div>
+                <div class="button">
+                    <button class="btn"><a href="#">Đăng nhập</a></button>
+                </div>
+            </header>
+            <div class="banner"></div>
+            <div id="content" class="content">
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfnth2mqzddw77_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn"><a href="./sp.html">Mua ngay</a></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/242a10dd98cc056cbd73d12fdf280b9b_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn"><a href="./sp.html">Mua ngay</a></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Điện Thoại Samsung Galaxy S21 FE 5G - 8GB/128GB</div>
+                        <div class="money">₫8.690.000</div>
+                        <div class="btn"><a href="./sp.html">Mua Ngay</a></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn"><a href="./sp.html">Mua ngay</a></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn"><a href="./sp.html">Mua ngay</a></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://down-vn.img.susercontent.com/file/242a10dd98cc056cbd73d12fdf280b9b_tn" alt="" />
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn"><a href="./sp.html">Mua ngay</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="footer">
+                <p>Tên sinh viên: ...</p>
+                <p>contact: abc@gmail.com</p>
+                <p>Liên hệ: 0123456789</p>
+            </div>
+        </div>
+    </body>
+</html>

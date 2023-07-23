@@ -1,0 +1,177 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.main1 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.header .list-menu {
+    display: flex;
+}
+
+.header .list-menu li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.header .list-menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #8E8E8E;
+}
+
+.header .list-menu li:hover a {
+    color: #69B99D;
+}
+
+.header .login-register {
+    display: flex;
+}
+
+.header .sign-in a,
+.header .login a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-right: 5px;
+    color: #69B99D;
+}
+
+.header .sign-in:hover a {
+    background-color: #69B99D;
+    color: #fff;
+}
+
+.header .login:hover a {
+    background-color: #69B99D;
+    color: #fff;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.heading {
+    margin-left: 20px;
+}
+
+.heading span {
+    color: #69b99d;
+    background-color: #f8f9fe;
+    padding: 5px 10px;
+}
+
+.heading .name {
+    margin: 10px 0;
+    color: #054457;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.heading .des {
+    color: #73788c;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.heading button {
+    background-color: #69b99d;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.heading button:hover {
+    color: #69b99d;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.content {
+}
+
+.content h2 {
+    color: #054457;
+}
+
+.content-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-heading .content-title {
+    text-align: justify;
+    margin: 0 20px;
+}
+
+.oh-yeah {
+    display: flex;
+    margin: 50px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.footer-1 p {
+    margin: 20px 0;
+}
+
+.footer-1 .des {
+    margin-bottom: 10px;
+}
+
+.footer-1 input {
+    border: 1px border #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.footer-1 .btn-send {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    font-weight: 600;
+    color: #000;
+}
+
+.footer-1 .btn-send:hover {
+    color: #fff;
+    background-color: #69B99D;
+    box-shadow: 4px 0 4px  #69B99D;
+    cursor: pointer;
+}
+
+.footer-2 p,
+.footer-3 p {
+    color: #575757;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+iframe {
+    margin: auto;
+}
+

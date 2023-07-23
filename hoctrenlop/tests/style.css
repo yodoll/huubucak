@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    text-align: center;
+}
+
+.nav{
+    height: 50px;
+    background-color: chocolate;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    line-height: 50px;
+}
+
+.banner{
+    background-image: url('./img/anh2.png');
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content{
+    height: 550px;
+    background-color: bisque;
+}
+
+.content .section{
+   
+}
+
+.content .section h4{
+    padding: 15px 0;
+    font-size: 16px;
+    font-family: 'roboto';
+    font-weight: 700;
+}
+
+.content .new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .news{
+    text-align: center;
+    border: 2px solid #ccc;
+    width: 250px;
+    padding: 20px 45px;
+    margin: 10px 10px;
+    
+}
+
+.footer {
+    height: 150px;
+    background-color: aquamarine;
+}
+

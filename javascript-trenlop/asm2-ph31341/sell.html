@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="content">
+                <div class="content-section">
+                    <h2 class="content-heading">Danh mục sản phẩm</h2>
+                    <div class="row sp">
+                        <div class="col sp1">
+                            <div class="sp-body" data-id="1">
+                                <img class="sp-img" src="./assets/img/1.jpg" alt="" />
+                                <div class="sp-ten">Tên sản phẩm: Apple iPhone 11 64GB</div>
+                                <div class="sp-hang">Thương hiệu: Apple</div>
+                                <div class="sp-price">Giá: <strong class="sp-color">10.690.000đ</strong></div>
+                                <button class="sp-add">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="col sp1">
+                            <div class="sp-body" data-id="2">
+                                <img class="sp-img" src="./assets/img/2.jpg" alt="" />
+                                <div class="sp-ten">Tên sản phẩm: Apple Watch SE 2 (2022) 44mm GPS Sport Band</div>
+                                <div class="sp-hang">Thương hiệu: Apple</div>
+                                <div class="sp-price">Giá: <strong class="sp-color">8.490.000đ</strong></div>
+                                <button class="sp-add">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="col sp1">
+                            <div class="sp-body" data-id="3">
+                                <img class="sp-img" src="./assets/img/3.jpg" alt="" />
+                                <div class="sp-ten">Tên sản phẩm: Apple AirPods 3rd gen</div>
+                                <div class="sp-hang">Thương hiệu: Apple</div>
+                                <div class="sp-price">Giá: <strong class="sp-color">4.490.000đ</strong></div>
+                                <button class="sp-add">Thêm vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="buy-sp">
+                    <h2 class="cart">cart</h2>
+                    <thead>
+                        <tr>
+                            <td>Sản phẩm</td>
+                            <td>Giá</td>
+                            <td>SL</td>
+                            <td>Chọn</td>
+                        </tr>
+                    </thead>
+                    <tbody id="giohang"></tbody>
+                </table>
+                <div class="tongtien" id="total-money">Tong tien: 0</div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <script>
+            const btn = document.querySelectorAll(".sp-add");
+            let products = [];
+            // console.log(btn)
+            btn.forEach(function (button) {
+                button.addEventListener("click", function (event) {
+                    const btnItems = event.target;
+                    const productEl = btnItems.parentElement;
+                    const id = productEl.dataset.id;
+                    const productImg = productEl.querySelector(".sp-img").src;
+                    const productName = productEl.querySelector(".sp-ten").innerText;
+                    const productPrice = productEl.querySelector(".sp-color").innerText;
+                    let product;
+
+                    const prd = products.find((product, index) => {
+                        return product.id == id;
+                    });
+
+                    if (prd) {
+                        product = {
+                            id,
+                            productImg,
+                            sl: prd.sl + 1,
+                            productName,
+                            productPrice,
+                        };
+                        products = products.map((prd) => (prd.id == id ? product : prd));
+                    } else {
+                        product = {
+                            id,
+                            productImg,
+                            sl: 1,
+                            productName,
+                            productPrice,
+                        };
+                        products.push(product);
+                    }
+                    // forEach, map, filter, find, reduce
+                    render();
+                    // Xoa
+                });
+
+                //
+            });
+
+            function render() {
+                const html = products.map(function (product) {
+                    return `<tr>
+                            <td style="display: flex; align-items: center; padding-right: 20px">
+                                <img style="width: 70px" src="${product.productImg}" alt="" />${product.productName}
+                            </td>
+                            <td>
+                                <p><span class="prd-price">${product.productPrice}</span><sup>đ</sup></p>
+                            </td>
+                            <td style="width: 30px; outline: none"><input type="number" class="product-sl"  data-id ="${
+                                product.id
+                            }" value="${product.sl}" min="1" /></td>
+                            <td style="cursor: pointer"><button data-id ="${
+                                product.id
+                            }"  class="btn-remove">Xóa</button></td>
+
+                            <td class='total-prd'  style="cursor: pointer">${
+                                product.sl * +product.productPrice.slice(0, -1).replaceAll(".", "")
+                            }</td>l
+                        </tr>`;
+                });
+
+                document.querySelector("#giohang").innerHTML = html;
+
+                //oNchange số lượng
+                const prdSlEls = document.querySelectorAll(".product-sl");
+                prdSlEls.forEach((item) => {
+                    item.onchange = () => {
+                        if (item.value < 0) {
+                            item.value = 0;
+                        }
+                        const totalPrdEl = item.parentElement.parentElement.querySelector(".total-prd");
+                        const priceEl = item.parentElement.parentElement.querySelector(".prd-price");
+                        const id = item.dataset.id;
+
+                        products = products.map((prd) => {
+                            if (prd.id === id) {
+                                const { id, productImg, productName, productPrice } = prd;
+                                const newProduct = { id, productImg, productName, productPrice, sl: +item.value };
+                                return newProduct;
+                            }
+                            return prd;
+                        });
+
+                        totalPrdEl.innerHTML = item.value * +priceEl.textContent.slice(0, -1).replaceAll(".", "");
+                        totalMoney();
+                    };
+                });
+
+                totalMoney();
+
+                // Xóa phần tử
+                const btnRemoves = document.querySelectorAll(".btn-remove");
+                btnRemoves.forEach((btn) => {
+                    btn.onclick = () => {
+                        const id = btn.dataset.id;
+                        const newProducts = products.filter((product) => product.id !== id);
+                        products = newProducts;
+                        render();
+                    };
+                });
+            }
+
+            function totalMoney() {
+                const totalEl = document.getElementById("total-money");
+                let total = 0;
+                const totalPrs = document.querySelectorAll(".total-prd");
+                totalPrs.forEach((el) => {
+                    total += +el.textContent;
+                });
+                totalEl.innerHTML = "Tổng tiền: " + total.toLocaleString() + " VND";
+            }
+        </script>
+    </body>
+</html>

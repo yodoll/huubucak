@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tin tức điện thoại</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+
+            html {
+              font-family: Arial, Helvetica, sans-serif;
+           }
+
+            .main {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: 100px;
+            }
+            .logo {
+                width: 178.83px;
+                height: 60px;
+            }
+            ul {
+                display: flex;
+            }
+            li {
+                list-style: none;
+                padding: 0 21px;
+                font-weight: 500;
+                font-weight: 700;
+            }
+
+            .header ul li:hover {
+              color: orange;
+              cursor: pointer;
+            }
+
+            .button .btn {
+                border: none;
+                background-color: #000000;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                padding: 20px 10px;
+            }
+
+            .button .btn a {
+              text-decoration: none;
+              color: #ccc;
+            }
+
+            .button .btn:hover a {
+                color: #fff;
+            }
+
+            .icon {
+                width: 24px;
+                height: 24px;
+                padding: 0 3px;
+            }
+
+            .main header {
+                text-align: center;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .container {
+                max-width: 960px;
+                margin: 20px auto;
+                padding: 0 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+            }
+
+            .news-item {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+            }
+
+            .news-item h2 {
+                margin-top: 0;
+                color: #333;
+            }
+
+            .news-item p {
+                color: #666;
+            }
+
+            .news-item img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <header class="header">
+                <img src="./img/image 7.png" alt="" class="logo" />
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Products</li>
+                    <li>Page</li>
+                    <li>Blog</li>
+                </ul>
+                <div style="display: flex; cursor: pointer;" >
+                    <img src="./img/notifications_none.png" alt="" class="icon" />
+                    <img src="./img/person.png" alt="" class="icon" />
+                    <img src="./img/add_shopping_cart.png" alt="" class="icon" />
+                </div>
+                <div class="button">
+                    <button class="btn"><a href="form.html">Đăng nhập</a></button>
+                </div>
+            </header>
+            <header>
+                <h1>Tin tức điện thoại</h1>
+            </header>
+
+            <div class="container">
+                <div class="news-item">
+                    <h2>Tin tức 1</h2>
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfnth2mqzddw77_tn" alt="Hình ảnh" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec est diam. Sed hendrerit
+                        neque non malesuada congue. Nullam at metus eget nisi condimentum cursus at non arcu.
+                    </p>
+                </div>
+
+                <div class="news-item">
+                    <h2>Tin tức 2</h2>
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="Hình ảnh" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec est diam. Sed hendrerit
+                        neque non malesuada congue. Nullam at metus eget nisi condimentum cursus at non arcu.
+                    </p>
+                </div>
+
+                <div class="news-item">
+                    <h2>Tin tức 3</h2>
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="Hình ảnh" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec est diam. Sed hendrerit
+                        neque non malesuada congue. Nullam at metus eget nisi condimentum cursus at non arcu.
+                    </p>
+                </div>
+            </div>
+
+            <footer>&copy; 2023 Tin tức điện thoại. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

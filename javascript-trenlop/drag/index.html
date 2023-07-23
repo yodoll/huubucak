@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <p>keo va the logo vao hinh chu nhat</p>
+        <div class="box1" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"
+            style="height: 400px; width: 400px; border-style: solid;"></div>
+        <br>
+        <div class="drag-container">
+            <img src="FPT_Polytechnic_Hanoi.png" alt="" class="drag1" draggable="true" ondragstart="drag(event)"
+                id="data" width="400px" height="400px">
+        </div>
+    </div>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData('text', event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData('text');
+            event.target.appendChild(document.getElementById(data));
+        }
+
+        function dragLeave(event) {
+            event.preventDefault();
+            console.log(event);
+            if (event.target.className != "box1") {
+                document.getElementById(event.target.id).remove();
+            }
+        }
+    </script>
+</body>
+
+</html>

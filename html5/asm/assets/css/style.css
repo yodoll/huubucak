@@ -1,0 +1,282 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+.main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.header .list-menu {
+    display: flex;
+}
+
+.header .list-menu li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.header .list-menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #8E8E8E;
+}
+
+.header .list-menu li:hover a {
+    color: #69B99D;
+}
+
+.header .login-register {
+    display: flex;
+}
+
+.header .sign-in a,
+.header .login a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-right: 5px;
+    color: #69B99D;
+}
+
+.header .sign-in:hover a {
+    background-color: #69B99D;
+    color: #fff;
+}
+
+.header .login:hover a {
+    background-color: #69B99D;
+    color: #fff;
+}
+
+.banner {
+    position: relative;
+    height: 500px;
+}
+
+.recomend {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    right: 50%;
+}
+
+.recomend h2 {
+    font-size: 40px;
+    color: #1F2744;
+    font-weight: 600;
+}
+
+.recomend p {
+    font-weight: 400;
+    color: #73788C;
+    margin-top: 20px;
+}
+
+.img-banner {
+    position: absolute;
+    right: 0;
+}
+
+.content {
+    margin: 60px;
+    height: 600px;
+}
+
+.content-heading {
+    width: 50%;
+    margin-left: 6%;
+}
+
+.content-heading span {
+    color:#69B99D; 
+    background-color: #F8F9FE;
+    padding: 10px;
+}
+
+.content-heading h3 {
+    font-weight: 600;
+    color: #054457;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.content-heading p {
+    color: #73788C;
+    font-weight: 400;
+}
+
+.content-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.content-second img:hover {
+    opacity: 0.5;
+}
+
+
+.content-second h5 {
+    color: #1F2744;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.content-second p {
+    color: #A6A6A6;
+    font-size: 14px;
+}
+
+.content-second .price {
+    font-size: 20px;
+    color: #69B99D;
+    margin: 10px 0;
+}
+
+.content-second .btn-buy {
+    border: 1px solid #69B99D;
+    text-align: center;
+}
+
+.content-second .btn-buy:hover {
+    color: #fff;
+    background-color: #69B99D;
+    box-shadow: 3px 0 5px  #69B99D;
+    cursor: pointer;
+}
+
+.content-second .btn-buy .btn {
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    color: #69B99D;
+    padding: 10px 0;
+}
+
+.content-second .btn-buy:hover .btn {
+    color: #fff;
+    background-color: #69B99D;
+    box-shadow: 3px 0 5px  #69B99D;
+    cursor: pointer;
+} 
+
+.advante {
+    margin: 60px;
+    height: 600px;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+    padding: 35px;
+}
+
+.advante-sub {
+    
+}
+
+.advante-heading {
+    width: 20%;
+}
+
+.advante h4 {
+    color:#69B99D; 
+    background-color: #F8F9FE;
+    padding: 10px;
+}
+
+.advante h3 {
+    font-weight: 600;
+    color: #054457;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.advante-second {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.advante .advante-second h3 {
+    font-weight: 600;
+    color: #054457;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.advante .advante-second p {
+    color: #73788C;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+.footer-1 p {
+    margin: 20px 0;
+}
+
+.footer-1 .des {
+    margin-bottom: 10px;
+}
+
+.footer-1 input {
+    border: 1px border #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.footer-1 .btn-send {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    font-weight: 600;
+    color: #000;
+}
+
+.footer-1 .btn-send:hover {
+    color: #fff;
+    background-color: #69B99D;
+    box-shadow: 4px 0 4px  #69B99D;
+    cursor: pointer;
+}
+
+.footer-2 p,
+.footer-3 p {
+    color: #575757;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+
+

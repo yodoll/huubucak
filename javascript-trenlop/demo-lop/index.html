@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/styel.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <img src="./assets/img/image 7.png" alt="" class="logo" />
+                <ul class="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Page</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+                <div class="icon">
+                    <a href=""><img src="./assets/img/notifications_none.png" alt="" class="img-icon" /></a>
+                    <a href=""><img src="./assets/img/person.png" alt="" class="img-icon" /></a>
+                    <a href=""><img src="./assets/img/add_shopping_cart.png" alt="" class="img-icon" /></a>
+                </div>
+            </div>
+            <div class="banner"></div>
+            <div class="content">
+                <div class="item">
+                    <img src="./assets/img/image 10.jpg" alt="" class="img-10">
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn">Add To Cart</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/image 10.jpg" alt="" class="img-10">
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn">Add To Cart</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/image 10.jpg" alt="" class="img-10">
+                    <div class="des">
+                        <div class="title">Oversized check overshirt</div>
+                        <div class="money">$546.00</div>
+                        <div class="btn">Add To Cart</div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner2">
+                <img src="./assets/img/image 12.jpg" alt="" class="img-12">
+            </div>
+            <div class="footer">
+                <div class="box">FPT POLYTECHNIC</div>
+            </div>
+        </div>
+        <script>
+            var itemShop = document.querySelectorAll(".item");
+            var description = document.querySelectorAll(".des");
+            
+
+            itemShop.EventListener("onclick", function() {
+                description.style.transform = "translateY(-100px)";
+                description.style.display = "block";
+                description.style.transition = "all 0.5"
+            });
+            
+        </script>
+    </body>
+</html>

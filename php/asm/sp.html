@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main .title {
+            padding: 20px;
+            color: orange;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .chitiet-sp p {
+            margin: 20px 0;
+        }
+
+        .chitiet-sp p span {
+            color: red;
+        }
+
+        .mua-sp {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .mua-sp .btn-them button {
+            padding: 10px 10px;
+            color: #fff;
+            background-color: orange;
+            border: none;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .mua-sp .btn-them:hover button {
+            color: #000;
+        }
+
+        .mua-sp .btn-thanhtoan button {
+            padding: 10px 10px;
+            color: #fff;
+            background-color: orange;
+            border: none;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .mua-sp .btn-thanhtoan:hover button {
+            color: #000;
+        }
+
+        .list {
+            padding: 20px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 class="title">Chi tiết sản phẩm</h2>
+        <div class="header">
+            <div class="anh-sp">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgkbpydcdpbeba_tn" alt="">
+            </div>
+            <div class="chitiet-sp">
+                <h4>Điện thoại Reno8 Pro mới nguyên bản 12+512GB smartphone toàn màn hình Android Dual Sim Chính Hãng mới COD</h4>
+                <p>Giá: <span>1.390.000₫</span></p>
+                <div class="thong-tin">
+                    <h4>Thông tin sản phẩm</h4>
+                    <ul class="list">
+                        <li>Số lần thử lại:oppo Reno8 pro</li>
+                        <li>Màn hình:6.8inch</li>
+                        <li>Máy ảnh: 48MP+72MP</li>
+                        <li>Số còn lại: Hệ điều hành Android 11.0</li>
+                        <li>Pin nội bộ</li>
+                        <li>Số mẫu: oppo Reno 8 pro</li>
+                    </ul>
+                </div>
+                <div class="mua-sp">
+                    <div class="btn-them">
+                        <button>Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="btn-thanhtoan">
+                        <button>Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

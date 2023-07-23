@@ -1,0 +1,125 @@
+@font-face {
+    font-family:"Louis Vuitton Web","Helvetica Neue","Helvetica",Arial,sans-serif;
+    src: url(/f8/assets/fonts/LouisVuitton-Regular.woff2);
+}
+
+html {
+    font-family:"Louis Vuitton Web","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+body {
+    margin: 0;
+    display: block;
+}
+
+#header {
+    color: white;
+    width: 100%;
+    margin-bottom: -130px;
+    z-index: 999;
+    position: relative;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.left .search {
+    font-size: small;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.middle h1 {
+    font-size: xx-large;
+}
+
+.second-menu li, .main-menu li {
+    list-style: none;
+}
+
+.second-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-bottom {
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.second-menu a {
+    font-size: small;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: medium;
+}
+
+.discover, .play-video {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 0 35px;
+}
+
+.discover h2 {
+    font-size: xx-large;
+}
+
+.discover button {
+    font-size: medium;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    width: 300px;
+    height: 70px
+}
+
+.play-video {
+    right: 0;
+    font-size: medium;
+    margin: 20px;
+}
+
+.play-video .icon-1 {
+    letter-spacing: 20px;
+}
+
+.play-video .icon-2 {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.picture {
+    width: 100%;
+}
+
+
+
+
+
+
+
+

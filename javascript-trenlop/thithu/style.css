@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    width: 900px;
+    margin: 0 auto;
+    height: 1500px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+.btn-pre {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background-color: orange;
+    border-radius: 50px;
+}
+
+.btn-pre:hover {
+    background-color: yellow;
+}
+
+.btn-next {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background-color: orange;
+    border-radius: 50px;
+}
+
+.btn-next:hover {
+    background-color: yellow;
+}
+
+.slide {
+    height: 50px;
+    background-color: black;
+}
+
+.autonext{
+    position: absolute;
+    margin-left: 280px;
+    line-height: 56px;
+    padding: 0px 20px;
+    background-color: rgb(12, 150, 104);
+    border-radius: 50%;
+}
+
+.autonext:hover {
+    background-color: rgb(91, 221, 65);
+}
+
+.stopslide {
+    position: absolute;
+    margin-left: 580px;
+    line-height: 56px;
+    padding: 0px 20px;
+    background-color: rgb(12, 150, 104);
+    border-radius: 50%;
+}
+
+.stopslide:hover {
+    background-color: rgb(91, 221, 65);
+}
+
+
+
+
+
+
+

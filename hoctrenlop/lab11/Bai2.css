@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+.thead:first-child{
+    background-color: rgb(121, 209, 89);
+    color: white;
+}
+.thead{
+    height: 42px;
+}
+.cap{
+    margin: 28px;
+    color: red;
+    font-size: 39px;
+    background-color: lightgrey;
+
+}
+.title{
+    height: 42px;
+    background-color: rgb(201, 240, 182);
+}
+.body1{
+    line-height: 36px;
+}
+.time{
+    width: 80px;
+}
+.live{
+    width: 13%;
+    text-align: center;
+}
+.team1,.team2{
+    width: 35%;
+}
+.team1{
+    color: red;
+}
+.adlive{
+    width: 13%;
+    color: red;
+    text-align: center;
+}

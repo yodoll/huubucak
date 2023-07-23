@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            margin-top: 28px;
+            font-size: 28px;
+            color: red;
+        }
+        .list{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            font-size: 26px;
+            color: #ddd;
+            margin: 16px;
+        }
+        .orange{
+            color: orange;
+        }
+        .outPut{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Feedback</h2>
+    <ul class="list">
+        <li class="item">&#9733</li>
+        <li class="item">&#9733</li>
+        <li class="item">&#9733</li>
+        <li class="item">&#9733</li>
+        <li class="item">&#9733</li>
+    </ul>
+    <div class="outPut"></div>
+    <script>
+        var listUl = document.querySelector('.list');
+        console.log(listUl);
+        var item = document.querySelectorAll('.item');
+        console.log(item);
+        var out = document.querySelector('.outPut');
+        console.log(out);
+
+        item.forEach(function(a,i){
+            a.aValue = (i+1);
+            a.addEventListener('click',starRate);
+        });
+        function starRate(e){
+            out.innerHTML = 'You Rates this' + e.target.aValue +' '+ 'stars';
+            item.forEach(function(a,i){
+                if (i<e.target.aValue) {
+                    a.classList.add('orange')
+                } else {
+                    a.classList.remove('orange')
+                }
+            })
+        }
+
+    </script>
+</body>
+</html>

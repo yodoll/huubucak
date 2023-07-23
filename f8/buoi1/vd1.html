@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr>
+    <button class="nice">Nhấn vào đây</button>
+    <button class="yeah">Nhấn để đóng</button>
+    <h1 class="yolo">Hùng vip</h1>
+    <h1 class="yolo1">Hùng vip pro</h1>
+    <h1 class="yolo2">Hùng siêu vip pro</h1>
+    <script>
+        const Nice = document.querySelector(".nice")
+        const Yeah = document.querySelector(".yeah")
+        const Yolo = document.querySelector(".yolo")
+        const Yolo1 = document.querySelector(".yolo1")
+        const Yolo2 = document.querySelector(".yolo2")
+        Nice.addEventListener("click", function(){
+            Yolo.style.display = "block"
+            Yolo1.style.display = "block"
+            Yolo2.style.display = "block"
+        })
+        Yeah.addEventListener("click", function(){
+            Yolo.style.display = "none"
+            Yolo1.style.display = "none"
+            Yolo2.style.display = "none"
+        })
+    </script>
+</body>
+</html>

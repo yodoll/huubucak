@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="all">
+            <div class="menu">
+                <h2>slide chạy tự động</h2>
+                <hr />
+            </div>
+            <div class="slider">
+                <div class="img-1 mySlides">
+                    <img src="./img/1413699.jpg" alt="" style="width: 900px; height: 300px" />
+                </div>
+                <div class="img-2 mySlides">
+                    <img src="./img/2898021.jpg" alt="" style="width: 900px; height: 300px" />
+                </div>
+                <div class="img-3 mySlides">
+                    <img src="./img/3513670.jpg" alt="" style="width: 900px; height: 300px" />
+                </div>
+                <div class="img-4 mySlides">
+                    <img src="./img/3513674.jpg" alt="" style="width: 900px; height: 300px" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="btn-pre pull-left" onclick="plusDivs(-1)">PRE</div>
+                <div class="btn-next pull-right" onclick="plusDivs(1)">NEXT</div>
+            </div>
+            <div class="slide">
+                <div class="autonext" onclick="autonext()">auto</div>
+                <div class="stopslide" onclick="stopslide()">stop</div>
+            </div>
+        </div>
+        <script>
+            var slideIndex = 1;
+            var interval;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs((slideIndex += n));
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                //   var dots = document.getElementsByClassName("demodots");
+                if (n > x.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = x.length;
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+
+            function autonext() {
+                clearInterval(interval);
+                autoSlide();
+            }
+
+            // autonext();
+            function autoSlide() {
+                interval = setInterval(function () {
+                    plusDivs(1);
+                }, 1500);
+            }
+
+            function stopslide() {
+                clearInterval(interval);
+            }
+        </script>
+    </body>
+</html>

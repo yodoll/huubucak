@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        } */
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        
+        <form action="" class="form"  name="check">
+            <h2>Đặt hàng</h2>
+            <div class="">
+                <label for="">Sản phẩm: </label>
+                <input type="text" name="tenSP" id="name">
+            </div>
+            <div class="">
+                <label for="">Loại: </label>
+                <select name="" id="type">
+                    <option value="0"></option>
+                    <option value="IPon">IPon</option>
+                    <option value="LG">LG</option>
+                    <option value="ABG">ABG</option>
+                </select>
+               
+            </div>
+            
+            <div class="">
+                <label for="">Đơn giá: </label>
+                 <input type="text" class="price">
+            </div>
+            
+            <div class="">
+                <label for="">Nơi nhận hàng: </label>
+                <input type="radio" name="diachi" onclick="anhien(0)"  checked> Nội thành
+                <input type="radio" name="diachi" onclick="anhien(1)"  > Ngoại thành
+            </div>
+            
+            <div id="phivc" style="display: none;">
+                <label for="">Phí vận chuyển: </label>
+                <input type="text" name="" id="" value="1000">
+            </div>
+                
+           <input type="button" value="BUY" onclick="return kiemTra()">
+           <div class=""></div>
+            
+        </form>
+    </div>
+    <script src="./bai5.js"></script>
+</body>
+</html>

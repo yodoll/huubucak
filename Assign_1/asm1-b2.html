@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .app {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app__nav {
+            background: #0b5051;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgb(0 0 0 / 50%);
+        }
+
+        .nav-link {
+            display: inline-block;
+            transition: 0.4s;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 15px;
+        }
+
+        .nav-link:hover {
+            background-color: #ffffff;
+            color: #EEA200;
+        }
+
+        .nav-link.active {
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #EEA200;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header class="app__header">
+            <img src="https://linhtd.name.vn/web1042/images/Banner1-1.png" alt="" class="app__header-img">
+        </header>
+
+        <nav class="app__nav">
+            <a href="./index.html" class="nav-link ">ASM 1: Bài 1</a>
+            <a href="#" class="nav-link active">ASM 1: Bài 2</a>
+            <a href="../Assign_2/index.html" class="nav-link">ASM 2: Bài 1</a>
+            <a href="../Assign_2/asm2_b2.html" class="nav-link">ASM 2: Bài 2</a>
+        </nav>
+        
+        <div style="width: 300px; margin: 0 auto">
+            <h3>Chọn sản phẩm</h3>
+            <div id="display">
+                <img id="anh" src="https://linhtd.name.vn/web1042/images/nopic.jpg" alt="loi" class="img-product" width="100%" />
+            </div>
+            <select id="sp" style="width: 300px; padding: 5px 0;">
+                <option value="sp0">--- Vui lòng chọn sản phẩm ---</option>
+                <option value="sp1">Mặt nạ mật ong</option>
+                <option value="sp2">Nước hoa hồng</option>
+                <option value="sp3">Trà nghệ tây</option>
+            </select>
+            <p id="ten">Tên sản phẩm: </p>
+            <p id="gia">Giá: 0 đ</p>
+        </div>
+
+        <div class="footer">
+            <img src="../img/imgpoly.png" alt="" class="">
+        </div>
+    </div>
+
+    <script>
+        const imgs = [
+            {
+                img: 'https://linhtd.name.vn/web1042/images/nopic.jpg',  
+                name: 'không',
+                coin: 0
+            },
+            {
+                img: 'https://linhtd.name.vn/web1042/images/anh1.jpg',  
+                name: 'Mặt lạ mặt ong',
+                coin: 2000
+            },
+            {
+                img: 'https://linhtd.name.vn/web1042/images/anh2.jpg',  
+                name: 'Nước hoa hồng',
+                coin: 3000
+            },
+            {
+                img: 'https://linhtd.name.vn/web1042/images/anh3.jpg',  
+                name: 'Trà nghê tây',
+                coin: 4000
+            }
+        ]
+
+        const image = document.querySelector('.img-product')
+        const select = document.querySelector('select')
+        const nameProduct = document.querySelector('#ten')
+        const coinProduct = document.querySelector('#gia')
+
+        select.onchange = () => {
+            const itemProduct = imgs[select.value.substr(2)]
+
+            image.src = itemProduct.img
+            nameProduct.innerHTML = `Tên sản phẩm: ${itemProduct.name}`
+            coinProduct.innerHTML = `Tên sản phẩm: ${itemProduct.coin}`
+        }
+
+    </script>
+</body>
+</html>

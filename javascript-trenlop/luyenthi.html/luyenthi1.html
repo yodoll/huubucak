@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mySlide {
+            width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="mySlide">
+            <img src="img/3513729.jpg" style="width: 900; height: 450px;">
+        </div>
+        <div class="mySlide">
+            <img src="img/3513734.jpg" style="width: 900; height: 450px;">
+        </div>
+        <div class="mySlide">
+            <img src="img/3513740.jpg" style="width: 900; height: 450px;">
+        </div>
+        <div class="mySlide">
+            <img src="img/3513742.png" style="width: 900; height: 450px;">
+        </div>
+        <div class="mySlide">
+            <img src="img/3513762.jpg" style="width: 900; height: 450px;">
+        </div>
+    </div>
+
+
+    <div class="framehd">
+        <h1>Hoá Đơn</h1>
+        <div>Khách hàng <input id="khachhang" type="text"></form></div>
+        <p id="erkh"></p>
+        <div>Loại hàng 
+            <select name="" id="loaihang" onclick="chonloai()">
+                <option value="1" >Loại 1</option>
+                <option value="2" >Loại 2</option>
+                <option value="3" >Loại 3</option>
+            </select>
+            <p id="erlh"></p>
+        </div>
+        <div>Đơn giá <input id="dongia" type="text" value="500000" disabled></div>
+        <div>Số lượng <input id="soluong" type="text"></div>
+        <p id="ersl"></p>
+        <div>Thành tiền <input id="thanhtien" type="text" disabled></div>
+        <div>Nơi nhận hàng 
+            <div id="noinhanhang" >
+                <input type="radio" name="gender" id="noithanh" onclick="noinhan(1)">Nội thành
+                <input type="radio" name="gender" id="ngoaithanh" onclick="noinhan(2)">ngoại thành
+            </div>
+        </div>
+        <p id="ernnh"></p>
+        <div>Phí vận chuyển <input id="phivanchuyen" type="text" value="" disabled></div>
+        <input id="datmua" type="submit" value="Đặt Mua" onclick="datmua1()">
+    </div>
+    <script>
+        mySlides = 0;
+        showSlides(mySlides);
+
+        function showSlides() {
+            x = document.getElementsByClassName("mySlide");
+            mySlides++;
+            if (mySlides > x.length) {
+                mySlides = 1;
+            }
+            if (mySlides < 1) {
+                mySlides = x.length;
+            }
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[mySlides - 1].style.display = "block";
+        }
+        // setInterval(showSlides, 1500);
+
+
+
+        khachhang = document.getElementById("khachhang");
+        loaihang = document.getElementById("loaihang");
+        dongia = document.getElementById("dongia");
+        soluong = document.getElementById("soluong");
+        thanhtien = document.getElementById("thanhtien");
+        noinhanhang = document.getElementById("noinhanhang");
+        phivanchuyen = document.getElementById("phivanchuyen");
+        datmua = document.getElementById("datmua");
+        erkh = document.getElementById("erkh");
+        erlh = document.getElementById("erlh");
+        ersl = document.getElementById("ersl");
+        ernnh = document.getElementById("ernnh");
+        noithanh = document.getElementById("noithanh");
+        ngoaithanh = document.getElementById("ngoaithanh");
+
+        function chonloai() {
+            if (loaihang.value == 1) {
+                loai1 = 500000;
+                dongia.value = loai1;
+                thanhtien.value = loai1 * soluong.value;
+            }
+            else if (loaihang.value == 2) {
+                loai2 = 300000;
+                dongia.value = loai2;
+                thanhtien.value = loai2 * soluong.value;
+            }
+            else if (loaihang.value == 3) {
+                loai3 = 100000;
+                dongia.value = loai3;
+                thanhtien.value = loai3 * soluong.value;
+            }
+        }
+
+        function noinhan(n) {
+            if (n == 1) {
+                phivanchuyen.value = 0;
+            }
+            if (n == 2) {
+                phivanchuyen.value = 30000;
+            }
+        }
+
+        function datmua1() {
+                if (khachhang.value == "") {
+                    erkh.innerHTML = "khong bo trong";
+                    khachhang.focus();
+                }
+                else if (khachhang.value.trim() != "") {
+                    erkh.innerHTML = "";
+                }
+                if (soluong.value.trim() == "") {
+                    ersl.innerHTML = "khong bo trong phải nhập số";
+                soluong.focus();
+                }
+                else if (soluong.value.trim() != "") {
+                    ersl.innerHTML = "";
+                }
+                if (loaihang.value != 2 || loaihang.value != 3) {
+                    erlh.innerHTML = "phai chon loai hang"
+                }
+                else if (loaihang.value == 2 || loaihang.value == 3 || loaihang.value == 1) {
+                    erlh.innerHTML = ""
+                }
+            }
+        
+
+
+    </script>
+</body>
+</html>

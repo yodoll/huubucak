@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul > li{
+    display: inline-block;
+}
+
+.menu > ul > li > a{
+    display: block;
+    font-variant: small-caps;
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.menu > ul > li > a:hover{
+    color: yellow;
+}
+
+.menu > ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    border-radius:3px;
+    background-color:orangered;
+    text-align:center;
+}
+

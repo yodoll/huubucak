@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 1500px;
+}
+
+.wrapper{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 102px;
+    background: #272f54;
+}
+
+.header img {
+    display: block;
+    height: 64px;
+    width: 180px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.nav {
+    position: relative;
+    height: 54px;
+    background: #CB7802;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 54px;
+    margin: 0 15px;
+}
+
+.form-search {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+}
+
+.form-search input {
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-left: 18px;
+}
+
+.banner {
+    height: 264px;
+    background-image: url('./img/anh2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.content {
+    height: 900px;
+}
+
+.section {
+    width: 100%;
+}
+
+.section h4 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 16px;
+    color: #CB7802;
+    padding: 15px 0;
+}
+
+
+.section .news {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section .new {
+    text-align: center;
+    border: 2px solid #ccc;
+    width: 250px;
+    padding: 20px 30px;
+    margin: 0px 10px;
+}
+
+.section .new h5 {
+    padding: 10px 0;
+    color: #CB7802;
+    text-align: justify;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;    
+}
+
+.section .new p {
+    text-align: justify;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.footer {
+    height: 102px;
+    background: #272F54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer h2 {
+    color: #fff;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+}

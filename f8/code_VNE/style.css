@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-information {
+    width: 800px;
+}
+
+.heading {
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+.col {
+    background-color:rgb(247, 248, 252);
+}
+
+.row {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    height: 700px;
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+.row .col-content {
+    display: inline-block;
+    width: 700px;
+    line-height: 70px;
+}
+
+.row .content-ask {
+    display: inline-block;
+}
+
+.col-require {
+    float: right;
+}
+
+.form-info {
+    padding: 8px;
+    padding-right: 165px;
+    border: 1px solid #ccc;
+}
+
+.form-information {
+    padding: 10px 162px 125px 10px;
+    border: 1px solid #ccc;
+}
+
+
+.btn-heading {
+    text-align: center;
+}
+
+.btn-heading .btn {
+    color: #fff;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px 32px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: darkblue;
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px) {
+   
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .col-content {
+        padding: 0;
+    } 
+}
+

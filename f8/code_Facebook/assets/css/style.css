@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#row {
+    width: 980px;
+    margin: 0 auto;
+    padding: 20px 0;
+    height: 536px;
+    padding: 220px 0 112px;
+}
+
+
+.col-content {
+    display: inline-block;
+}
+
+#row img {
+    height: 106px;
+    margin: -28px;
+}
+
+#Content h2 {
+    font-size: 28px;
+    padding: 20px 0;
+    font-weight: 400;
+}
+
+.col-content {
+    margin-right: 0;
+    width: 580px;
+}
+
+.col-access {
+    padding: 10px 0 24px;
+    float: right;
+    width: 396px;
+    margin-top: -80px;
+    height: 456px;
+}
+
+.row {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    padding: 10px 0 24px;
+    text-align: center;
+    line-height: 63px;
+}
+
+
+
+.form-control {
+    padding: 14px 16px;
+    width: 92%;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+}
+
+.btn {
+    background-color: #1877f2;
+    width: 370px;
+    line-height: 48px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.password {
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-sub {
+    color:#fff;
+    background-color: #42b72a;
+    width: 178px;
+    line-height: 48px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    
+}
+
+/* .content {
+
+} */
+
+.content-share {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.content-share a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+

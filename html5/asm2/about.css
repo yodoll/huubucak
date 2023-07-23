@@ -1,0 +1,184 @@
+
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.header .list-menu {
+    display: flex;
+}
+
+.header .list-menu li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.header .list-menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #8e8e8e;
+}
+
+.header .list-menu li:hover a {
+    color: #1e1e1e;
+}
+
+.header .login-register {
+    display: flex;
+}
+
+.header .sign-in a,
+.header .login a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+.header .sign-in:hover a {
+    color: #1e1e1e;
+    background-color: #fff;
+}
+
+.header .login:hover a {
+    color: #1e1e1e;
+    background-color: #fff;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.heading {
+    margin-left: 20px;
+}
+
+.heading span {
+    color: #69b99d;
+    background-color: #f8f9fe;
+    padding: 5px 10px;
+}
+
+.heading .name {
+    margin: 10px 0;
+    color: #1e1e1e;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.heading .des {
+    color: #73788c;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.heading button {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.heading button:hover {
+    color: #1e1e1e;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-heading {
+    width: 45%;
+    background-color: #C1DCDC;
+    border-radius: 12px;
+}
+
+.content-title p {
+    padding: 10px;
+    text-align: justify;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+}
+
+.person .person-name {
+    font-weight: 700;
+}
+
+.person .person-name p {
+    color: rgba(30, 30, 30, 0.5);
+    font-size: 12px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 200px;
+    background-color: #ccc;
+    margin-top: 15px;
+}
+
+.footer-1 p {
+    margin: 20px 0;
+}
+
+.footer-1 .des {
+    margin-bottom: 10px;
+}
+
+.footer-1 input {
+    border: 1px border #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.footer-1 .btn-send {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    font-weight: 600;
+    color: #000;
+}
+
+.footer-1 .btn-send:hover {
+    color: #fff;
+    background-color: #69B99D;
+    box-shadow: 4px 0 4px  #69B99D;
+    cursor: pointer;
+}
+
+.footer-2 p,
+.footer-3 p {
+    color: #575757;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+

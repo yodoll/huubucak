@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        ">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="header">
+            <div class="wrapper">
+                <div class="main">
+                    <img
+                        class="picture"
+                        src="https://img.vccidata.com.vn/wp-content/uploads/2021/06/hinh-gai-xinh-mat-dep-7.jpg"
+                        alt=""
+                    />
+                    <h2 class="heading">Chào cậu người con gái của đời tớ</h2>
+                    <div class="content-main">Chúc cậu luôn vui vẻ và xinh đẹp</div>
+                    <div class="action">
+                        <button type="button" class="btn-ok">Okii</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout"></div>
+
+        <div class="content">
+            <div class="js" style="position: absolute; z-index: 9" onmouseover="start()">
+                <button class="btn-fail">Không đồng ý 😭😭</button>
+            </div>
+            <div class="heart-first">
+                <svg class="heart" viewBox="0 0 32 29.6">
+                    <path
+                        d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                  c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+                    />
+                </svg>
+                <div>
+                    <button class="btn-success">Đồng ý nhé 😍</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="answer">
+                <div class="ask">
+                    <h1 class="first-heading">Có đồng ý làm người yêu tớ Không</h1>
+                    <p class="first"><input type="radio" name="gender" />Có, mình đồng ý</p>
+                    <p class="first"><input type="radio" name="gender" />Đồng ý</p>
+                    <p class="first"><input type="radio" name="gender" />Cực kì đồng ý</p>
+                    <a href=""><button class="btn-again">Gửi</button></a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const myJs = document.querySelector(".js");
+            const myBtn = document.querySelector(".btn-success");
+            const classHeader = document.querySelector(".header");
+            const content = document.querySelector(".content");
+            const idHeader = document.querySelector("#header");
+            const okBtn = document.querySelector(".btn-ok");
+            const layout = document.querySelector(".layout");
+
+            var ptop = 0;
+            var pright = 0;
+            var pleft = 0;
+            var pbottom = 0;
+
+            function start(e) {
+
+
+                var rtop = Math.floor(Math.random() * 500);
+                var rbottom = Math.floor(Math.random() * 500);
+                var rright = Math.floor(Math.random() * 500);
+                var rleft = Math.floor(Math.random() * 500);
+
+                if (rtop - ptop < 200 && rtop - ptop > -200) {
+                    rtop = rtop + 200;
+                }
+
+                if (rleft - pleft < 200 && rleft - pleft > -200) {
+                    rleft = rleft + 200;
+                }
+
+                if (rright - pright < 200 && rright - pright > -200) {
+                    rright = rright + 200;
+                }
+
+                if (rbottom - pbottom < 200 && rbottom - pbottom > -200) {
+                    rbottom = rbottom + 200;
+                }
+
+                myJs.style.transition = "0.3s all"
+                myJs.style.top = `${rtop}px`;
+                myJs.style.right = `${rright}px`;
+                myJs.style.left = `${rleft}px`;
+                myJs.style.bottom = `${rbottom}px`;
+
+                ptop = rtop;
+                pleft = rleft;
+                pright = rright;
+                pbottom = rbottom;
+            }
+
+            myJs.addEventListener("click", function () {
+                console.log("Tao bấm được");
+            });
+
+            okBtn.addEventListener("click", function () {
+                layout.style.display = "none";
+                idHeader.style.display = "none";
+                content.style.display = "block";
+            });
+
+            myBtn.addEventListener("click", function () {
+                classHeader.style.display = "block";
+                layout.style.display = "block";
+                content.style.display = "none";
+            });
+        </script>
+    </body>
+</html>

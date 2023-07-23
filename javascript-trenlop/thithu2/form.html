@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/form.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all">
+        <h1>HÓA ĐƠN</h1>
+        <div class="header">     
+            <form action="" id="form" onsubmit="return false">
+                <div class="form">
+                    <p class="nice">Khách hàng:</p>
+                    <input id="kh" type="text" name="">
+                    <p id="erkh" style="color: red;"></p>
+                </div>
+                <div class="form">
+                    <p class="nice">Loại hàng</p>
+                    <select name="" id="loaihang" onclick="chonLoai()">
+                    <option value="0">Loại 1</option>
+                    <option value="1">Loại 2</option>
+                    <option value="2">Loại 3</option>
+                    </select>
+                    <p id="erlh" style="color: red;"></p>
+                </div>
+                <div class="form">
+                    <p class="nice">Đơn giá</p>
+                    <input id="dongia" type="text" value="50000" name="" disabled>
+                </div>
+                <div class="form">
+                    <p class="nice">Số lượng</p>
+                    <input id="soluong" type="text" name="" onchange="chonLoai()">
+                    <p id="ersl" style="color: red;"></p>
+                </div>
+                <div class="form">
+                    <p class="nice">Thành tiền</p>
+                    <input id="thanhtien" type="text" name="" disabled>
+                </div>
+                <div class="form" onclick="noiNhan()">
+                    <p class="nice">Nơi nhận hàng</p>
+                    <input type="radio" name="gender" id="noithanh"> Nội thành
+                    <input type="radio" name="gender" id="ngoaithanh"> Ngoại thành
+                    <p class="gender"></p>
+                </div>
+                <div class="form">
+                    <p class="nice">Phí vận chuyển</p>
+                    <input id="phi" type="text" name="" disabled>
+                </div>
+                <div class="btn">
+                    <button class="btn-control" onclick="datmua()">Đặt mua</button>
+                </div>
+            </div>
+            </form>
+    </div>
+    <script>
+        const form_cha = document.getElementById("form");
+        const khachHang = document.getElementById("kh");
+        const donGia = document.getElementById("dongia");
+        const soLuong = document.getElementById("soluong");
+        const thanhTien = document.getElementById("thanhtien");
+        const phiVc = document.getElementById("phi");
+        const gender = document.querySelector(".gender");
+        const form_con = document.querySelector(".form");
+        const erkh = document.getElementById("erkh");
+        const erlh = document.getElementById("erlh");
+        const ersl = document.getElementById("ersl");
+        const datMua = document.getElementById("datmua");
+        const noiThanh = document.getElementById("noithanh");
+        const ngoaiThanh = document.getElementById("ngoaithanh");
+        const loaiHang = document.getElementById("loaihang");
+
+
+       function chonLoai(){
+            if(loaiHang.value == 0){
+                var loai1 = 500000;
+                donGia.value = loai1;
+                thanhTien.value = loai1 * soLuong.value;
+            }else if(loaiHang.value == 1){
+                var loai2 = 300000;
+                donGia.value = loai2;
+                thanhTien.value = loai2 * soLuong.value;
+            }else if(loaiHang.value == 2){
+                var loai3 = 100000;
+                donGia.value = loai3;
+                thanhTien.value = loai3 * soLuong.value;
+            }
+       }
+
+       function noiNhan(){
+            if(noiThanh.checked){
+                phiVc.value = 0;
+            }
+            if(ngoaiThanh.checked){
+                phiVc.value = 30000;
+            }
+       }
+
+       function datmua(){
+            if (khachHang.value.trim() == "") {
+                    erkh.innerHTML = "Không được bỏ trống!";
+                    khachHang.focus();
+            }
+            else if (khachHang.value.trim() != "") {
+                erkh.innerHTML = "";
+            }
+            if (soLuong.value.trim() == "") {
+                ersl.innerHTML = "Không bỏ trống số lượng";
+            soLuong.focus();
+            }
+            else if (soLuong.value.trim() != "") {
+                ersl.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block{
+        background-color: rgba(34, 98, 167, 0.7);
+        width: 150px;
+        height: 150px;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="hienThi()">Go right</button>
+    <div id="block"></div>
+    <script>
+        function hienThi(){
+            var a = document.querySelector('#block');
+            console.log(a)
+            var b = 0;
+            setInterval(function(){
+                if (a ===600) {
+                    clearInterval
+                }else  {
+                    b++;
+                    // a.style.left = `${b} px`;
+                    a.style.left = b + 'px';
+                }
+            },10);
+        }
+    </script>
+</body>
+</html>

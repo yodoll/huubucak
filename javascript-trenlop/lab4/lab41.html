@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 1. Tạo một mảng lưu trữ các mặt hàng
+            let inventoryArray = [];
+
+            // 2. Tạo 3 items với các thuộc tính name, model, cost và quantity
+            let item1 = {
+                name: "Laptop",
+                model: "LT001",
+                cost: 1200000,
+                quantity: 50,
+            };
+
+            let item2 = {
+                name: "Điện thoại",
+                model: "DT001",
+                cost: 250000,
+                quantity: 20,
+            };
+
+            let item3 = {
+                name: "Máy tính",
+                model: "MT001",
+                cost: 3600000,
+                quantity: 30,
+            };
+
+            // 3. Đưa 3 đối tượng này vào mảng chính
+            inventoryArray.push(item1, item2, item3);
+
+            // Xuất inventory array bằng console
+            console.log(inventoryArray);
+
+            // 4. Truy xuất quantity element của item thứ 3 bằng console
+            console.log("Số lượng của item thứ 3 là: " + inventoryArray[2].quantity);
+
+            // 5. Thêm và truy xuất thêm các elements khác từ main array/inventory array
+            let item4 = {
+                name: "Túi xách",
+                model: "TX001",
+                cost: 500000,
+                quantity: 10,
+            };
+
+            // Thêm item 4 vào inventory array
+            inventoryArray.push(item4);
+
+            // Xuất inventory array bằng console
+            console.log(inventoryArray);
+
+            // Truy xuất name element của item thứ 2 trong inventory array
+            console.log("Tên của item thứ 2 là: " + inventoryArray[1].name);
+        </script>
+    </body>
+</html>

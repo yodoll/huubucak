@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="infor" >
+        <form action="bai3_2.html"  method="get" onsubmit="return laythongtin()">
+            <input type="text" name="a" id="ho" placeholder="Ho" >
+            <input type="text" name="b" id="ten" placeholder="Ten" >
+            <input type="text" name="c" id="tuoi" placeholder="Tuoi" >
+            <input type="submit" value="Send">
+        </form>
+    </div> -->
+    <!-- <script>
+        function laythongtin() {
+           var form = event.target;
+           console.log(form)
+            // var ho = document.getElementById('ho');
+            var ho = form.children.a
+            console.log(ho)
+            //check trong
+            if(ho.value === ""){
+                ho.focus();
+                alert('Nhap ho');
+                return false;
+            }
+            // var ten = document.getElementById('ten');
+            var ten = form.children.b;
+            console.log(ten);
+            if (ten.value==='') {
+                ten.focus();
+                alert('Nhap ten');
+                return false;
+            }
+            // var tuoi = document.getElementById('tuoi');
+            var tuoi = form.children.c;
+            console.log(tuoi);
+            if (tuoi.value<=0) {
+                tuoi.focus();
+                alert('Nhap tuoi lon hon 0')
+            }
+            return false;
+        }
+    </script> -->
+    <div id="demo6">
+        <div class="thongbao"></div>
+        <form action="bai3_2.html" method="get" onsubmit="return kiemTra()">
+            <input type="text" name="HO" id="ho" placeholder="Ho" >
+            <input type="text" name="Ten" id="ten" placeholder="Ten" >
+            <input type="text" name="Tuoi" id="tuoi" placeholder="Tuoi" >
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <script>
+        function kiemTra(){
+    var fo6 = event.target;
+    console.log(fo6);
+    // var ho = fo6.children.HO;
+    var ho = document.getElementById('ho');
+    console.log(ho)
+    if (ho.value ==="") {
+        ho.focus();
+        alert('Nhap ho !!');
+        return false;
+    }
+    // var ten = fo6.children.Ten;
+    var ten = document.getElementById('ten');
+
+        if (ten.value==='') {
+        user.focus();
+            alert('Nhap ten!!');
+            return false;
+
+        }
+    // var tuoi = fo6.children.Tuoi;
+    var tuoi = document.getElementById('tuoi');
+
+    if (tuoi.value <= 0 ) {
+        tuoi.focus();
+        alert('Nhap tuoi lon hon 0!!');
+        return false;
+    }
+    return true;
+}
+    </script>
+</body>
+
+</html>

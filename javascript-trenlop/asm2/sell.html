@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sell.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alll">
+        <div class="all">
+            <div class="header"><h2>Bán Hàng</h2></div>
+            <div class="product">
+                <div class="s23">
+                    <img  src="img/s23.jpg" alt="">
+                    <h3>SamSung S23</h3>
+                    <h2>15.490.000đ</h2>
+                    <button id="checkAll" onclick="addsp(1)">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="s23plus">
+                    <img src="img/s23plus.jpg" alt="">
+                    <h3 class="errol1">SamSung S23 PLUS</h3>
+                    <h2>20.590.000đ</h2>
+                    <button id="checkAll" onclick="addsp(2)">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="s23ultra">
+                    <img src="img/s23untra.jpg" alt="">
+                    <h3>SamSung S23 ULTRA</h3>
+                    <h2>
+                        24.990.000đ
+                    </h2>
+                    <button id="checkAll" onclick="addsp(3)">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+        <div class="pay">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="rowww">
+                        <th class="row1">Hàng hóa</th>
+                        <th class="row2">Đơn giá</th>
+                        <th class="row3">Số lượng</th>
+                        <th class="row4">Thành tiền</th>
+                        <th class="row5">Xoá Tất cả</th>
+                    </tr>
+                </thead>
+                <tbody class="column">
+                    <tr id="rmsp1">
+                        <td>SamSung S23</td>
+                        <td>15.490.000đ</td>
+                        <td>
+                            <input type="number" value="0" min="0" step="1" id="sp1" onclick="addsp(4)"/>
+                        </td>
+                        <td id="price1sp1"></td>
+                        
+                    </tr>
+                    <td ><input class="remove" type="button" value="Xoá" onclick="addsp(7)"></td>
+                    <tr id="rmsp2">
+                        <td>SamSung S23 PLUS</td>
+                        <td>20.590.000đ</td>
+                        <td>
+                            <input type="number" value="0" min="0" step="1" id="sp2" onclick="addsp(5)"/>
+                        </td>
+                        <td id="price1sp2"></td>
+                        
+                    </tr>
+                    <td><input class="remove" type="button" value="Xoá" onclick="addsp(8)"></td>
+                    <tr id="rmsp3">
+                        <td>SamSung S23 ULTRA</td>
+                        <td>24.990.000đ</td>
+                        <td>
+                            <input type="number" value="0" min="0" step="1" id="sp3" onclick="addsp(6)"/>
+                        </td>
+                        <td id="price1sp3"></td>
+                        
+                    </tr>
+                    <td><input class="remove" type="button" value="Xoá" onclick="addsp(9)"></td>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4" class="sum" >Tổng: </th>
+                        <th id="tongtien"></th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+    <script src="sell.js"></script>
+</body>
+</html>

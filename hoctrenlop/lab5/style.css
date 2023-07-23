@@ -1,0 +1,47 @@
+.anhlab5 {
+    width: 20%;
+    height: 150px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: yellow;
+    box-shadow: 1px 3px 5px blue;
+}
+
+.anhlab5:hover {
+    box-shadow: 1px 1px 10px red;
+    background-color: aqua;
+}
+
+.column {
+    width: 25%;
+    float: left;
+}
+
+.san-pham {
+    border-radius: 10px;
+border: 1px solid gray;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.san-pham .ten {
+    font-size: larger;
+    font-variant: small-caps;
+    color: blue;
+}
+
+.san-pham img {
+    max-width: 95%;
+}
+
+.san-pham .gia {
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.san-pham .gia del {
+    color: gray;
+}

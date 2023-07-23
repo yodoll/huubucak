@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function rollDice() {
+                return Math.floor(Math.random() * 6) + 1;
+            }
+
+            function playGame() {
+                console.log("==== Chào mừng đến với trò chơi Tài Xỉu ====");
+
+                while (true) {
+                    var choice = prompt("Hãy chọn Tài (T) hoặc Xỉu (X): ").toUpperCase();
+
+                    if (choice === "T") {
+                        console.log("Bạn đã chọn Tài!");
+                    } else if (choice === "X") {
+                        console.log("Bạn đã chọn Xỉu!");
+                    } else {
+                        console.log("Lựa chọn không hợp lệ. Hãy chọn T hoặc X.");
+                        continue;
+                    }
+
+                    var dice1 = rollDice();
+                    var dice2 = rollDice();
+                    var dice3 = rollDice();
+                    var total = dice1 + dice2 + dice3;
+
+                    console.log("Kết quả tung xúc xắc: " + dice1 + ", " + dice2 + ", " + dice3);
+                    console.log("Tổng điểm: " + total);
+
+                    if (
+                        (choice === "T" && total >= 11 && total <= 18) ||
+                        (choice === "X" && total >= 3 && total <= 10)
+                    ) {
+                        console.log("Chúc mừng! Bạn đã thắng!");
+                    } else {
+                        console.log("Rất tiếc, bạn đã thua!");
+                    }
+
+                    var playAgain = prompt("Bạn có muốn chơi lại không? (C/K): ").toUpperCase();
+                    if (playAgain !== "C") {
+                        break;
+                    }
+                }
+
+                console.log("Cảm ơn bạn đã tham gia trò chơi!");
+            }
+
+            playGame();
+        </script>
+    </body>
+</html>

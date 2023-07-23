@@ -1,0 +1,56 @@
+/* PC */
+@media (min-width: 75.25em) {
+    .pc {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width:  46.25em) and (max-width: 63.9375em) {
+    .tablet {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 61.25em) {
+    .member-item {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    #content .member-name {
+        font-size: 30px;
+    }
+
+    .place-body button,
+    .place-body p,
+    .place-body h2 {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .ticket-list li {
+        font-size: 25px;
+    }
+
+    #content .section-sub-heading {
+        font-size: 30px;
+    }
+
+    #content .section-heading {
+        font-size: 39px;
+    }
+
+    .form-control,
+    .contact-info,
+    .btn {
+        font-size: 20px;
+    }
+
+
+}

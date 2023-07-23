@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <p>Ho: <span id="ho"></span></p>
+        <p>Ten: <span id="ten"></span></p>
+        <p>Tuoi: <span id="tuoi"></span></p>
+    </div>
+    <script>
+       'uses strict'
+        var a = location.search;
+        var b = new URLSearchParams(a);
+        var ho  = b.get('HO');
+        var ten = b.get('Ten');
+        var tuoi = b. get('Tuoi');
+        document.getElementById('ho').innerHTML=ho;
+        document.getElementById('ten').innerHTML=ten;
+        document.getElementById('tuoi').innerHTML=tuoi;
+        // for (var c of b) {
+        //     console.log(a+ " " );
+        // }
+    </script>
+</body>
+</html>
+

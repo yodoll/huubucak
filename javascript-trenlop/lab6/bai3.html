@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img:hover{
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 
+         filter: grayscale(100%);
+        } */ 
+    </style>
+</head>
+<body>
+    <img onmouseover="fover()" onmouseout="fout()" id="anh" src="/lab6/img/0.png" width="400px" height="400px" alt="">
+    <hr>
+    <button onclick="first()">First</button>
+    <button onclick="next()">Next</button>
+    <button onclick="prev()">Prev</button>
+    <button onclick="last()">Last</button>
+    <script>
+        var out = new Image();
+        out.src = "/lab6/img/0.png";
+        var over = new Image();
+        over.src = "/lab6/img/1.png";
+        function fover() {
+            var anh = document.getElementById("anh");
+            anh.src = over.src;
+        }
+        function fout() {
+            var anh = document.getElementById("anh");
+            anh.src = out.src;
+        }
+        var images = [];
+        for (let i = 0; i < 6; i++) {
+           images[i] = new Image();
+           images[i].src = "/lab6/img/" + i + ".png";
+        }
+        var index = 0;
+        function first() {
+            index = 0;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function last() {
+            index = images.length - 1;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function next(){
+           index++; 
+           if (index >= images.length){
+            index = 0;
+           }
+           var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+        function prev(){
+            index--; 
+            if (index < 0){
+            index = images.length -1;
+           }
+           var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 18px;
+            }
+
+            body {
+                background-color: olivedrab;
+            }
+
+            .app__nav {
+                background: #0b5051;
+                text-align: center;
+                box-shadow: 2px 2px 8px rgb(0 0 0 / 50%);
+            }
+
+            .nav-link {
+                display: inline-block;
+                transition: 0.4s;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 12px 15px;
+            }
+
+            .nav-link:hover {
+                background-color: #ffffff;
+                color: #EEA200;
+            }
+
+            .nav-link.active {
+                border-radius: 6px;
+                background-color: #ffffff;
+                color: #EEA200;
+            }
+            .d-flex {
+                display: flex;
+                align-items: center;
+            }
+
+            .app {
+                background: #fff;
+                width: 800px;
+                margin: 0px auto;
+            }
+
+            .input-item {
+                margin-right: 16px;
+            }
+
+            .input-item label {
+                font-weight: 600;
+                margin-right: 4px;
+            }
+
+            .input-item input {
+                height: 30px;
+            }
+            .table-list {
+                padding: 20px;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .table-list tr {
+                display: table-row;
+                height: 30px;
+            }
+            th {
+                background-color: olive;
+            }
+
+            tr:nth-child(2n + 1) {
+                background-color: rgba(204, 204, 204, 0.356);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main" style="width: 1200px; margin: 0 auto;">
+            <header class="app__header">
+                <img  src="https://linhtd.name.vn/web1042/images/Banner1-1.png" class="app__header-img" />
+            </header>
+
+            <nav class="app__nav">
+                <a href="../Assign_1/index.html" class="nav-link">ASM 1: Bài 1</a>
+                <a href="../Assign_1/asm1-b2.html" class="nav-link">ASM 1: Bài 2</a>
+                <a href="./index.html" class="nav-link ">ASM 2: Bài 1</a>
+                <a href="#" class="nav-link active">ASM 2: Bài 2</a>
+            </nav>
+
+            <div class="app">
+                <h1 class="" style="text-align: center; margin: 30px; font-weight: 700">
+                    DANH MỤC SẢN PHẨM
+                </h1>
+    
+                <div class="app__options d-flex">
+                    <div class="input-item d-flex">
+                        <label for="product" class="">Tên sản phẩm</label>
+                        <input type="text" class="" id="product" style="width: 150px" />
+                    </div>
+    
+                    <div class="input-item d-flex">
+                        <label for="price">Đơn giá</label>
+                        <input type="text" id="price" style="width: 100px" />
+                    </div>
+    
+                    <div class="input-item d-flex">
+                        <label for="amount" class="">Số lượng</label>
+                        <input type="number" min="0" class="" id="amount" style="width: 50px" />
+                    </div>
+    
+                    <button class="btn-add-product" style="width: 100px" onclick="app.addProduct()">Thêm sản phẩm</button>
+                </div>
+    
+                <table class="table-list">
+                </table>
+            </div>
+
+            <div class="footer" style="margin-top: 20px;">
+                <img src="../img/imgpoly.png" alt="" class="" />
+            </div>
+        </div>
+
+        <script>        
+            const productsList = document.querySelector(".table-list");
+            const inputProduct = document.querySelector("#product");
+
+            const app = {
+                products: [
+                    {
+                        name: "bút chì",
+                        price: 3000,
+                        amount: 3,
+                    },
+                    {
+                        name: "thước kẻ",
+                        price: 4000,
+                        amount: 4,
+                    },
+                ],
+
+                titleProduct: `<tr>  <th style="width: 10%">STT</th>
+                                <th style="width: 25%">Tên sản phẩm</th>
+                                <th style="width: 20%">Đơn giá</th>
+                                <th style="width: 20%">Số lượng</th>
+                                <th style="width: 20%">Thành tiền</th>
+                                </tr>`
+                ,
+
+                footerProduct : `<tr class="" style="background-color: rgba(204, 204, 204, 0.356)">
+                                    <td colspan="5" class="" style="text-align: right; font-weight: 600">Tổng tiền: <span id="totalMoney">1000</span> VNĐ</td>
+                                </tr>`
+                ,    
+
+                render: function() {
+                    const htmls = app.products.map((product, index) => {
+                        return `
+                            <tr class="product-${index}">
+                                <td class="" style="text-align: center">${index + 1}</td>
+                                <td class="">${product.name}</td>
+                                <td class=""><input type="text" id="product-price" style="width: 120px" value="${Math.abs(product.price)}" oninput="app.tinhtien('product-${index}'), app.tongtien()"/></td>
+                                <td class=""><input type="number" id="product-amount" min="0" style="width: 80px" value="${Math.abs(product.amount)}" oninput="app.tinhtien('product-${index}'), app.tongtien()"/></td>
+                                <td id="money"></td>
+                            </tr>
+                            `
+                        })
+                        
+                    productsList.innerHTML = app.titleProduct + htmls.join('') + app.footerProduct
+                },
+                
+                addProduct:  function() {
+                    const inputProduct = document.querySelector("#product")
+                    const inputPrice = document.querySelector("#price")
+                    const inputAmount = document.querySelector("#amount")
+                 
+                    const productAdd = {name: inputProduct.value,price: Number(inputPrice.value),amount: Number(inputAmount.value)} 
+                    if(!productAdd.name == '') app.products.push(productAdd)
+                    app.start()
+                    inputProduct.value = inputPrice.value = inputAmount.value = ''
+                }, 
+
+                tinhtien: function(product) {
+                    const productItem = document.getElementsByClassName(product)[0]
+                    const priceProduct = productItem.querySelector("#product-price")
+                    const amountProduct = productItem.querySelector("#product-amount")
+                    const money = productItem.querySelector("#money");
+
+                    money.innerHTML = Math.abs( Number(priceProduct.value) * amountProduct.value)
+                },
+
+                tongtien: function() {
+                    let money = 0;
+                    const totalMoney = document.querySelector("#totalMoney")
+                    const prices = document.querySelectorAll("#money")
+
+                    prices.forEach((price) => {
+                        money += Number(price.innerHTML);
+                    });
+                    totalMoney.innerHTML = money;
+                },
+        
+                handleEvent: function() {
+                    window.onkeydown = (e) => {
+                        if(e.key == 'Enter') app.addProduct()
+                    }
+                },
+
+                start: function() {
+                    app.render()
+                    app.products.forEach((product, index) => {
+                        app.tinhtien(`product-${index}`)
+                    })
+                    app.tongtien()
+                    app.handleEvent()
+                }           
+            }  
+            app.start()  
+
+        </script>
+    </body>
+</html>

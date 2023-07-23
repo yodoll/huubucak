@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Nhan vao nut duoi day de lay toa do
+    </p>
+    <button onclick="getLocation()"> Dinh vi</button>
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+            } else {
+                x.innerHTML = "Trinh duyet cua ban k ho tro"
+            }
+
+        }
+        function showPosition(position) {
+            x.innerHTML = " Vi do :"+ position.coords.latitude +
+             "<br>Kinh do :" +  position.coords.longitude;
+        }
+        function showError(error) {
+            switch (error.code){
+                case error.PERMISSION_DENIED:
+                x.innerHTML="nguoi dung tu choi cap quyen dinh vi"
+                break;
+                case error.PERMISSION_UNAVAILABLE:
+                x.innerHTML="k co thong tin vi tri"
+                break; 
+                case error.TIMEOUT:
+                x.innerHTML="het time gui yeu cau dinh vi"
+                break;
+                case error.UNKNOWN_ERROR:
+                x.innerHTML="Loi chua xac dinh"
+                break; 
+            }
+        }
+        function showPosition(position) {
+            var latlon = position.coords.latitude +"," +  position.coords.longitude;
+            var img_url = "";
+            document.getElementById("mapholder").innerHTML= "<img src ='"+ img_url + "'>"; 
+        }
+    </script>
+</body>
+</html>

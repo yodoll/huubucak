@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <!-- phần đầu -->
+    <head>
+        <title>cmanga</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="root.css">
+        <style>
+            html{
+                font-size: 100%;
+                /* cho ảnh nền */
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSiqmFNiB7A1czra4249T8FuKj8Im8ucpsg&usqp=CAU);
+                background-repeat: no-repeat;
+                background-size: 70%;
+                height: 1500px;
+
+            }
+
+
+            h2{
+                font-size: 2rem;
+            }
+            
+        </style>
+        <style>   
+         * {
+            margin: 0;
+        }
+        .box{
+            height: 100px;
+        }
+        .box1{
+            width: 25%;
+            background-color: purple;
+            position: relative;
+            top: 50px;
+        }
+        .box2{
+            width: 100px;
+            background-color: orange;
+            /* Đệm, Viền, Khoảng lề */
+            padding: 30px;
+            border: 2px solid #333;
+            margin: 10px 20px;
+            box-sizing: border-box;
+        }
+        </style>
+        <!-- các tên lớp giả (css pseudo classes): root, hover, active, first-child, last-child -->
+        <style>
+            .box.box1:hover{
+                color: violet;
+            }
+            .box.box2:active{
+                background-color: blue;
+            }
+            
+            li:first-child{
+                color: red;
+            }
+
+            li:last-child{
+                color: red;
+            }
+        </style>
+    <!-- pseudo element: before, after, first-letter, first-line, selection -->
+    <style>
+        h1::first-letter{
+            font-size: 50px;
+        }
+        h1::selection{
+            background-color: violet;
+            color: #fff;
+        }
+        .hmm{
+            --height: 200px;
+            width: 100%;
+            background-color: orange;
+            text-align: center;
+            height: var(--height);
+
+        }
+        h1{
+            line-height: var(--height);
+        }
+
+        
+        
+    </style>
+        
+    </head>
+    <!-- phần thân -->
+    <body>
+        <div class="hmm">
+            <h1>center</h1>
+        </div>
+         <div class="box box1">box 1</div>
+         <div class="box box2">box 2</div>
+        <div>
+            <h1>truyện tranh</h1>
+            <h1 id="first">Truyen tranh</h1>
+            <h1 class="second">Truyen chu</h1>
+            <h2>Truyen hay</h2>
+            <h3>Truyen Hai</h3>
+            
+            <p>Lâm Dật sau khi bị công ty sa thải, thần xui quỷ khiến thế nào nhận được HỆ THỐNG THỂ NGHIỆM MỌI NGHỀ NGHIỆP, Lâm Dật dựa vào hệ thống bố trí từng bước từng bước đi lên trở thành đại lão toàn cầu! Thể nghiệm tài xế DiDi, ban thưởng một chiếc xe Pagani Zonda. Thể nghiệm giảng viên đại học, ban thưởng mười tòa nhà. Thể nghiệm ông chủ, ban thưởng 1 tỷ. Thể nghiệm</p>
+            
+            <img src="https://cmangac.com/assets/tmp/book/avatar/1635305725-8709.jpg" alt="truyện tranh">
+            <a href="https://cmangac.com/">Tới trang truyện</a>
+            
+            <ul>
+                <li>trọng sinh đô thị tu tiên</li>
+                <li>bách luyện thành thần</li>
+                <li>võ luyện đỉnh phong</li>
+            </ul>
+            <table>
+                <thead>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Thể loại</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Trọng sinh đô thị tu tiên</td>
+                        <td>Tu tiên</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Bách luyện thành thần</td>
+                        <td>Tu tiên</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Võ luyện đỉnh phong</td>
+                        <td>Tu tiên</td>
+                    </tr>
+            </div>
+            </tbody>
+        </table>
+    </body>
+</html>

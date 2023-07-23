@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.app {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.app__nav {
+    background: #0b5051;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 50%);
+}
+
+.nav-link {
+    display: inline-block;
+    transition: 0.4s;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #EEA200;
+}
+
+.nav-link.active {
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #EEA200;
+}
+
+html {
+    font-family: Roboto;
+    background-color: #ccc;
+}
+
+#root {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    border: 2px solid olive;
+}
+.app__option {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.app__option button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.app__image {
+    position: relative;
+    overflow: hidden;
+    z-index: -1000;
+    padding: 20px;
+}
+
+.app__image-item {
+    display: none;
+}
+
+ .app__image-item.active { 
+    display: block;
+}
+.app__image-img {
+    width: 100%;
+    margin: auto;
+}
+
+.app__note {
+    display: flex;
+}
+
+.app__note-title {
+    margin: 0 auto 10px auto;
+    color: olive;
+}
+
+/* XỬ LÍ SLIDER */
+
+.item-image-next {
+    display: block;
+    padding: 20px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 0%;
+    left: -100%;
+}
+.item-image-prev {
+    display: block;
+    padding: 20px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 0%;
+    right: -100%;
+}
+
+:root {
+    --timer: 0.6s;
+}
+
+.image-item-start {
+    animation: slideOut linear var(--timer) forwards;
+}
+
+.image-item-end {
+    animation: slideIn linear var(--timer) forwards;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 0.8;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0.8;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+}
